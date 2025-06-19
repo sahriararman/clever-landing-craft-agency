@@ -21,8 +21,8 @@ export const locationData: Record<string, LocationData> = {
       "Oil & Gas industry web solutions",
       "E-commerce for Texas retailers"
     ],
-    phoneNumber: "(512) 555-0123",
-    email: "texas@devcraft.com"
+    phoneNumber: "(555) 123-4567",
+    email: "hello@devcraft.com"
   },
   california: {
     name: "California",
@@ -35,8 +35,8 @@ export const locationData: Record<string, LocationData> = {
       "San Francisco startup experience",
       "Entertainment industry specialists"
     ],
-    phoneNumber: "(415) 555-0124",
-    email: "california@devcraft.com"
+    phoneNumber: "(555) 123-4567",
+    email: "hello@devcraft.com"
   },
   newyork: {
     name: "New York",
@@ -49,8 +49,8 @@ export const locationData: Record<string, LocationData> = {
       "Fashion & media industry focus",
       "24/7 support across all boroughs"
     ],
-    phoneNumber: "(212) 555-0125", 
-    email: "newyork@devcraft.com"
+    phoneNumber: "(555) 123-4567", 
+    email: "hello@devcraft.com"
   },
   florida: {
     name: "Florida",
@@ -63,7 +63,7 @@ export const locationData: Record<string, LocationData> = {
       "Tampa Bay area expertise", 
       "Real estate & hospitality focus"
     ],
-    phoneNumber: "(305) 555-0126",
-    email: "florida@devcraft.com"
+    phoneNumber: "(555) 123-4567",
+    email: "hello@devcraft.com"
   }
 };
