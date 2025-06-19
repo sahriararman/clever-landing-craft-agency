@@ -1,5 +1,5 @@
 
-import { ArrowRight, Code, Palette, Zap } from 'lucide-react';
+import { ArrowRight, Code, Palette, Zap, Star, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -16,9 +16,35 @@ const Hero = () => {
               That Convert
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Transform your ideas into powerful web applications that engage users and drive results.
-              We're your partner in digital innovation.
+              We promise the best WordPress web design and development services. Transform your ideas into powerful web applications that engage users and drive results.
             </p>
+          </div>
+
+          {/* Statistics Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto py-8">
+            <div className="flex flex-col items-center space-y-2 p-4 bg-white/60 backdrop-blur-sm rounded-lg">
+              <div className="flex items-center space-x-1 text-yellow-500">
+                <Star className="h-5 w-5 fill-current" />
+                <Star className="h-5 w-5 fill-current" />
+                <Star className="h-5 w-5 fill-current" />
+                <Star className="h-5 w-5 fill-current" />
+                <Star className="h-5 w-5 fill-current" />
+              </div>
+              <div className="text-3xl font-bold text-gray-900">350+</div>
+              <div className="text-sm text-gray-600">5-star Google reviews</div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-2 p-4 bg-white/60 backdrop-blur-sm rounded-lg">
+              <Users className="h-8 w-8 text-blue-600" />
+              <div className="text-3xl font-bold text-gray-900">2400+</div>
+              <div className="text-sm text-gray-600">Happy clients</div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-2 p-4 bg-white/60 backdrop-blur-sm rounded-lg">
+              <Award className="h-8 w-8 text-purple-600" />
+              <div className="text-3xl font-bold text-gray-900">40+</div>
+              <div className="text-sm text-gray-600">In-house WordPress experts</div>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
