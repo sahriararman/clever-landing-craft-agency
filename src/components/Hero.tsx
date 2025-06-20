@@ -1,14 +1,11 @@
-
 import { ArrowRight, Code, Palette, Zap, Star, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16">
+  return <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8 animate-fade-in">
           <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight px-0 py-[60px] text-center">
               We Build
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Digital Experiences
@@ -90,8 +87,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
