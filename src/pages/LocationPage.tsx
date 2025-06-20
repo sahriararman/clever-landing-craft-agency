@@ -8,31 +8,12 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { locationData } from '@/data/locationData';
-import { useEffect } from 'react';
 
 const LocationPage = () => {
   const { location } = useParams<{ location: string }>();
   
   // Get location data or use default
   const currentLocation = location ? locationData[location.toLowerCase()] : null;
-  
-  useEffect(() => {
-    // Smooth scrolling for anchor links
-    const handleClick = (e: Event) => {
-      const target = e.target as HTMLAnchorElement;
-      if (target.getAttribute('href')?.startsWith('#')) {
-        e.preventDefault();
-        const id = target.getAttribute('href')?.substring(1);
-        const element = document.getElementById(id || '');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    };
-
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
-  }, []);
 
   // If location not found, redirect to 404 or show default
   if (!currentLocation) {
