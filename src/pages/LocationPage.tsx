@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Header from '@/components/Header';
 import LocationHero from '@/components/LocationHero';
 import Services from '@/components/Services';
+import DigitalMarketing from '@/components/DigitalMarketing';
 import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
@@ -34,6 +35,7 @@ const LocationPage = () => {
       <Header />
       <LocationHero locationData={currentLocation} />
       <Services />
+      <DigitalMarketing />
       <Portfolio />
       <Testimonials />
       <Contact />
