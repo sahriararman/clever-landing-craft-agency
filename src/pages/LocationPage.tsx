@@ -2,8 +2,8 @@
 import { useParams } from 'react-router-dom';
 import Header from '@/components/Header';
 import LocationHero from '@/components/LocationHero';
-import Services from '@/components/Services';
-import DigitalMarketing from '@/components/DigitalMarketing';
+import LocationServices from '@/components/LocationServices';
+import LocationDigitalMarketing from '@/components/LocationDigitalMarketing';
 import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
@@ -34,8 +34,8 @@ const LocationPage = () => {
     <div className="min-h-screen">
       <Header />
       <LocationHero locationData={currentLocation} />
-      <Services />
-      <DigitalMarketing />
+      <LocationServices locationData={currentLocation} />
+      <LocationDigitalMarketing locationData={currentLocation} />
       <Portfolio />
       <Testimonials />
       <Contact />
