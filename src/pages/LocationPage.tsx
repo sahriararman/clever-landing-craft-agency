@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import LocationHero from '@/components/LocationHero';
 import LocationServices from '@/components/LocationServices';
 import LocationDigitalMarketing from '@/components/LocationDigitalMarketing';
+import LocationFAQ from '@/components/LocationFAQ';
 import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
@@ -36,6 +37,7 @@ const LocationPage = () => {
       <LocationHero locationData={currentLocation} />
       <LocationServices locationData={currentLocation} />
       <LocationDigitalMarketing locationData={currentLocation} />
+      <LocationFAQ locationData={currentLocation} />
       <Portfolio />
       <Testimonials />
       <Contact />
