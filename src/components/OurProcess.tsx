@@ -77,23 +77,26 @@ const OurProcess = () => {
           <div className="relative mb-16">
             <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 transform -translate-y-1/2"></div>
             <div className="flex justify-between relative">
-              {steps.map((step, index) => (
-                <button
-                  key={step.id}
-                  onClick={() => setActiveStep(index)}
-                  className={`w-16 h-16 rounded-full border-4 bg-white transition-all duration-300 hover:scale-110 ${
-                    activeStep === index
-                      ? 'border-blue-500 shadow-lg'
-                      : 'border-gray-300 hover:border-blue-300'
-                  }`}
-                >
-                  <step.icon 
-                    className={`w-6 h-6 mx-auto transition-colors duration-300 ${
-                      activeStep === index ? 'text-blue-500' : 'text-gray-400'
-                    }`} 
-                  />
-                </button>
-              ))}
+              {steps.map((step, index) => {
+                const IconComponent = step.icon;
+                return (
+                  <button
+                    key={step.id}
+                    onClick={() => setActiveStep(index)}
+                    className={`w-16 h-16 rounded-full border-4 bg-white transition-all duration-300 hover:scale-110 ${
+                      activeStep === index
+                        ? 'border-blue-500 shadow-lg'
+                        : 'border-gray-300 hover:border-blue-300'
+                    }`}
+                  >
+                    <IconComponent 
+                      className={`w-6 h-6 mx-auto transition-colors duration-300 ${
+                        activeStep === index ? 'text-blue-500' : 'text-gray-400'
+                      }`} 
+                    />
+                  </button>
+                );
+              })}
             </div>
             <div className="flex justify-between mt-4">
               {steps.map((step, index) => (
@@ -117,7 +120,10 @@ const OurProcess = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${steps[activeStep].color} flex items-center justify-center animate-scale-in`}>
-                    <steps[activeStep].icon className="w-8 h-8 text-white" />
+                    {(() => {
+                      const IconComponent = steps[activeStep].icon;
+                      return <IconComponent className="w-8 h-8 text-white" />;
+                    })()}
                   </div>
                   <div>
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
@@ -148,7 +154,10 @@ const OurProcess = () => {
               <div className="relative">
                 <div className={`w-full h-64 lg:h-80 rounded-xl bg-gradient-to-br ${steps[activeStep].color} opacity-20 animate-pulse`}></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <steps[activeStep].icon className={`w-24 h-24 text-gray-400 animate-scale-in`} />
+                  {(() => {
+                    const IconComponent = steps[activeStep].icon;
+                    return <IconComponent className="w-24 h-24 text-gray-400 animate-scale-in" />;
+                  })()}
                 </div>
               </div>
             </div>
