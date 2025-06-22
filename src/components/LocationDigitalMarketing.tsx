@@ -1,5 +1,5 @@
 
-import { Search, Globe, Share2 } from 'lucide-react';
+import { Search, Globe, Share2, BarChart3, PenTool, Megaphone } from 'lucide-react';
 import { LocationData } from '@/data/locationData';
 
 interface LocationDigitalMarketingProps {
@@ -29,6 +29,24 @@ const LocationDigitalMarketing = ({ locationData }: LocationDigitalMarketingProp
       title: processText('Social Media Marketing in (Location)'),
       description: processText('Create more lead-generation channels by employing profitable social media campaigns in (Location). Included in our digital marketing services is social media marketing solutions specifically designed for (Location) businesses. Our dedicated social media team and digital marketing experts work together to position your brand in front of your (Location) audience. We help you define your voice and brand presence and launch campaigns with real ROI through data-driven digital marketing tailored for the (Location) market.'),
       highlights: [processText('social media marketing solutions'), processText('(Location) businesses')]
+    },
+    {
+      icon: BarChart3,
+      title: processText('Pay-Per-Click Advertising - PPC in (Location)'),
+      description: processText('Maximize your ROI with targeted PPC campaigns across Google Ads, Bing, and social media platforms in (Location). Our certified PPC specialists create data-driven advertising strategies specifically for (Location) businesses that deliver immediate results. We handle everything from local keyword research and geo-targeted ad copy creation to bid management and conversion tracking to ensure your (Location) advertising budget generates maximum returns.'),
+      highlights: [processText('PPC campaigns'), processText('certified PPC specialists'), processText('(Location) businesses')]
+    },
+    {
+      icon: PenTool,
+      title: processText('Content Marketing & Strategy in (Location)'),
+      description: processText('Engage your (Location) audience with compelling content that drives conversions. Our content marketing team creates strategic content across multiple channels including blog posts, videos, infographics, and email campaigns specifically tailored for the (Location) market. We develop content that not only attracts your target (Location) audience but also positions your brand as an industry authority while supporting your overall digital marketing goals in (Location).'),
+      highlights: [processText('content marketing team'), processText('strategic content'), processText('(Location) market')]
+    },
+    {
+      icon: Megaphone,
+      title: processText('Email Marketing & Automation in (Location)'),
+      description: processText('Build lasting relationships with personalized email marketing campaigns that convert (Location) customers. Our email marketing specialists design automated workflows, segment your (Location) audience, and create compelling email content that drives engagement and sales. From welcome sequences to abandoned cart recovery, we optimize every touchpoint in your (Location) customer journey.'),
+      highlights: [processText('email marketing specialists'), processText('automated workflows'), processText('(Location) customers')]
     }
   ];
 
@@ -45,7 +63,7 @@ const LocationDigitalMarketing = ({ locationData }: LocationDigitalMarketingProp
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (

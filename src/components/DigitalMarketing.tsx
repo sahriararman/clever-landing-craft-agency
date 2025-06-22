@@ -1,5 +1,5 @@
 
-import { Search, Globe, Share2 } from 'lucide-react';
+import { Search, Globe, Share2, BarChart3, PenTool, Megaphone } from 'lucide-react';
 
 const DigitalMarketing = () => {
   const services = [
@@ -20,6 +20,24 @@ const DigitalMarketing = () => {
       title: 'Social Media Marketing',
       description: 'Create more lead-generation channels by employing profitable social media campaigns. Included in our digital marketing services is social media marketing solutions. Our dedicated social media team and digital marketing experts work together to position your brand in front of your audience. We help you define your voice and brand presence and launch campaigns with real ROI through data-driven digital marketing.',
       highlights: ['social media marketing solutions']
+    },
+    {
+      icon: BarChart3,
+      title: 'Pay-Per-Click Advertising - PPC',
+      description: 'Maximize your ROI with targeted PPC campaigns across Google Ads, Bing, and social media platforms. Our certified PPC specialists create data-driven advertising strategies that deliver immediate results. We handle everything from keyword research and ad copy creation to bid management and conversion tracking to ensure your advertising budget generates maximum returns.',
+      highlights: ['PPC campaigns', 'certified PPC specialists']
+    },
+    {
+      icon: PenTool,
+      title: 'Content Marketing & Strategy',
+      description: 'Engage your audience with compelling content that drives conversions. Our content marketing team creates strategic content across multiple channels including blog posts, videos, infographics, and email campaigns. We develop content that not only attracts your target audience but also positions your brand as an industry authority while supporting your overall digital marketing goals.',
+      highlights: ['content marketing team', 'strategic content']
+    },
+    {
+      icon: Megaphone,
+      title: 'Email Marketing & Automation',
+      description: 'Build lasting relationships with personalized email marketing campaigns that convert. Our email marketing specialists design automated workflows, segment your audience, and create compelling email content that drives engagement and sales. From welcome sequences to abandoned cart recovery, we optimize every touchpoint in your customer journey.',
+      highlights: ['email marketing specialists', 'automated workflows']
     }
   ];
 
@@ -36,7 +54,7 @@ const DigitalMarketing = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
